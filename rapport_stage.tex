@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template by Julien MARTIN-PRIN
+% https://github.com/flexiboy
+%
+% Based on the template by Alonso Giraldo
+% https://github.com/mydoum
+%
+%  All images must be included in
+%  a sub folder named pictures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%  DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[pdftex,colorlinks]{hyperref}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage[explicit]{titlesec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{lastpage}
+\usepackage{index}
+\usepackage{libertine}
+\usepackage{mdframed}
+\usepackage{colortbl}
+\usepackage{geometry}
+\usepackage{acronym}
+\usepackage{manfnt}
+\usepackage{setspace}
+\usepackage{subfig}
+\usepackage{enumitem}
+\usepackage{afterpage}
+\usepackage[parfill]{parskip}
+\usepackage{listings}
+\usepackage{array}
+
+\usepackage[acronyms,style=super,order=word]{glossaries}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%% Acronyms and glossary configuration
+\setacronymstyle{long-sc-short}
+\loadglsentries{includes/acronyms.tex}
+\loadglsentries{includes/glossary.tex}
+
+\makenoidxglossaries
+% \makeindex              % Décommenter au cas ou makenoidxglossaries ne trie
+% pas les entrées, dans le cas contraire supprimer
+
+% ===============================================
+%   Variables for this document
+% ===============================================
+
+\input{config} %document config and commands
+
+%%%%    title
+\renewcommand{\title}{Internhip title}
+%%%%    subtitle
+\newcommand{\subtitle}{Internship Report - year - your name}
+
+
+%-------------------------------------------------------------------------------
+%  DOCUMENT BEGIN
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{arabic}
+
+% First page
+\afterpage{\blankpage}
+\input{includes/first}
+
+\tableofcontents
+\newpage
+
+%\listoftables
+%\listofscripts
+
+% ===============================================
+%   Effective document begin
+% ===============================================
+
+\input{includes/acknoledgments}
+\input{includes/summary}
+
+\input{includes/introduction}
+
+\input{includes/conclusion}
+
+\listoffigures
+\clearpage
+
+\printnoidxglossaries
+\input{includes/bibliography}
+
+\clearpage
+\end{document}

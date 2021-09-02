@@ -1,0 +1,85 @@
+% ===============================================
+%   Chapters format
+% ===============================================
+
+\titleformat{\chapter}[frame]
+{\normalfont}
+{\filleft
+\enspace \MakeUppercase{\chaptertitlename} \thechapter\enspace}
+{3ex}
+{\LARGE\bfseries\filright#1}
+\titlespacing{\chapter}{0pt}{*-6}{*6}
+
+% ===============================================
+%   Chapters footer
+% ===============================================
+
+\setlength{\fboxrule}{0.5 mm}
+\setlength{\fboxsep}{1 mm}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\includegraphics[width=0.8cm]{pictures/logo_esilv_png_couleur.png}}
+\fancyfoot[L]{DVRC - \title{}}
+\fancyfoot[R]{page \thepage{}}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}}
+
+
+% ===============================================
+%   Classic page header/Footer
+% ===============================================
+
+\newcommand{\head}{
+\chead{}%{\secret \vspace*{1cm} }%
+\rhead{\includegraphics[width=0.8cm]{pictures/logo_esilv_png_couleur.png}}
+\lfoot{DVRC}
+\cfoot{\vspace*{0.5cm}}
+\rfoot{page \thepage}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}}
+
+\head
+
+% ===============================================
+%   Commands
+% ===============================================
+
+%% Blank page
+\newcommand{\blankpage}{%
+  \null
+  \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage}
+
+\setlength{\parindent}{1.5em}
+
+\graphicspath{{pictures/}}
+
+\geometry{paper=a4paper,
+    includeall,
+    headheight=1cm,
+    headsep=0.9cm,
+    vmargin=2cm,
+    hmargin=3cm,
+    marginparsep=0cm,
+    marginparwidth=0cm,
+%   showframe=true,
+}
+
+%%%%%%%% PDF properties %%%%%%%%%%%
+\hypersetup{
+unicode= true,
+pdftitle={},
+pdfauthor={DVRC},
+pdfsubject={},
+pdfkeywords={},
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+filecolor=black,
+urlcolor = black
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
